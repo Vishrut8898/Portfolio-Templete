@@ -1,0 +1,510 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /*font-family: "Poppins", sans-serif;*/
+}
+body {
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+/*NAVBAR -------------------------------------------------------------------------*/
+
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  background: none;
+  width: 100%;
+  z-index: 1;
+}
+.nav-links {
+  position: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: #fff;
+  width: 35%;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in;
+}
+.nav-links li {
+  list-style-type: none;
+  margin-top: 3rem;
+  opacity: 0;
+  padding: 10px 0px;
+}
+.nav-links .icons {
+  margin: 4rem 0rem;
+}
+.nav-links .icons a {
+  color: #333333;
+  margin: 0rem 1rem;
+}
+.nav-links li a {
+  color: #333333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  outline: none;
+}
+nav .nav-links li a::after {
+  position: absolute;
+  content: "";
+  width: 0px;
+  height: 1px;
+  background: #333333;
+  bottom: 0%;
+  left: 50%;
+  transition: 500ms all ease;
+}
+nav .nav-links li a:hover::after {
+  left: 0%;
+  width: 100%;
+}
+.burger {
+  display: block;
+  margin: 15px;
+  z-index: 1;
+}
+.burger div {
+  background-color: black;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  transition: all 0.4s ease;
+}
+.burger .line2 {
+  width: 15px;
+  margin-left: 14px;
+}
+.nav-active {
+  transform: translateX(0%);
+  -webkit-box-shadow: -12px 13px 25px -13px rgba(125, 124, 125, 1);
+  -moz-box-shadow: -12px 13px 25px -13px rgba(125, 124, 125, 1);
+  box-shadow: -12px 13px 25px -13px rgba(125, 124, 125, 1);
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+.text {
+  z-index: -1;
+  padding-top: 10rem;
+  padding-left: 8rem;
+  margin-bottom: 23rem;
+}
+.text h1 {
+  font-size: 70px;
+  font-family: "Krona One", sans-serif;
+}
+.text .info {
+  padding: 10px;
+  border-left: 2px solid #333333;
+}
+
+/*About----------------------------------------------------------------------------*/
+
+.container {
+  z-index: -1;
+  width: 90%;
+  margin: 5rem auto 7rem auto;
+}
+.container .about-me {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.container .about-me .my-image-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.container .about-me .my-image-section img {
+  width: 65%;
+  height: auto;
+  margin: 5vh auto;
+}
+.container .about-me .my-image-section .border-line {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 65%;
+}
+.container .about-me .my-image-section .border-line div {
+  height: 6px;
+}
+.container .about-me .my-image-section .border-line .line1 {
+  background: #b0b0b0;
+}
+.container .about-me .my-image-section .border-line .line2 {
+  background: #737373;
+}
+.container .about-me .my-image-section .border-line .line3 {
+  background: #878787;
+}
+.container .about-me .my-image-section a {
+  margin: 40px auto;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  background: #333333;
+  text-decoration: none;
+  transition: 1s;
+}
+.container .about-me .my-image-section a:hover {
+  transform: rotate(360deg);
+}
+.container .about-me .content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+}
+.container .about-me .content .hii {
+  display: flex;
+}
+.container .about-me .content .hii h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+}
+.container .about-me .content .name {
+  font-family: "Poppins", sans-serif;
+  font-size: 45px;
+}
+
+/*PROJECTS-----------------------------------------------------------------------*/
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  width: 90%;
+  margin: 1rem auto 8rem auto;
+}
+.wrapper .first {
+  width: 100%;
+}
+.wrapper .first .title {
+  font-size: 26px;
+  letter-spacing: 1px;
+  display: flex;
+  padding: 1rem;
+}
+.wrapper .first .dash {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  width: 40%;
+  height: 1px;
+  border: 1px solid #333333;
+}
+.wrapper .first .quality {
+  margin-top: 47vh;
+  padding: 2rem;
+}
+.wrapper .first .quality p:nth-child(1) {
+  font-size: 26px;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+.wrapper .second .second-inner {
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-left: 3rem;
+}
+.wrapper .second .second-inner .images {
+  margin: 20px 10px;
+  text-align: center;
+}
+.wrapper .second .second-inner .images img {
+  width: 100%;
+}
+.wrapper .second .second-inner .images a {
+  color: #333333;
+  text-decoration: none;
+}
+
+/*contacts*/
+
+.box {
+  width: 80%;
+  margin: 1rem auto 7rem auto;
+  border: 1px solid #333333;
+}
+.box .box-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+}
+.box .box-inner .one {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box-inner .one img {
+  width: 50%;
+  margin: 3rem;
+}
+.box-inner .one .links {
+  margin: 0 1rem 0 1rem;
+}
+.box-inner .one .links .links-1,
+.links-2 {
+  display: flex;
+}
+.box-inner .one .links a {
+  color: #333333;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+.box-inner .one .links .links-1 p {
+  margin-top: 10px;
+}
+.box-inner .one .links .links-2 p {
+  margin-top: 10px;
+}
+.box-inner .two {
+  border-left: 1px solid #3c3c3c;
+  text-align: center;
+  margin: 2rem 0;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  width: 100%;
+}
+.box-inner .two form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 10px;
+  width: 100%;
+}
+.box-inner .two form input {
+  width: 85%;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #3c3c3c;
+  font-size: 16px;
+  padding: 0;
+  margin-bottom: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+.box-inner .two form textarea {
+  height: 200px;
+  width: 85%;
+}
+.box-inner .two form button {
+  width: 90px;
+  height: 40px;
+  margin: 1rem 0;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  background: #333333;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+}
+.box-inner .two form button:hover {
+  background: none;
+  color: #333333;
+  border: 1px solid #333333;
+}
+.box-inner .two form textarea {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #3c3c3c;
+  font-family: "Poppins", sans-serif;
+}
+
+/*thank you-----------------------------------------------------------------------*/
+
+.thank {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem auto;
+  width: 90%;
+}
+.thank h1 {
+  font-size: 4rem;
+  font-family: "Poppins", sans-serif;
+}
+.thank p {
+  margin: 6px 0;
+}
+
+/*media queries-------------------------------------------------------------------*/
+
+@media screen and (max-width: 1268px) {
+  .wrapper .second .second-inner .images {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .nav-links {
+    width: 50%;
+  }
+  .container .about-me .my-image-section img {
+    width: 95%;
+    height: auto;
+    margin: 5vh auto;
+  }
+  .wrapper {
+    bottom: 8vh;
+  }
+  .wrapper .first .quality {
+    margin-bottom: 0vh;
+  }
+  .box .box-inner {
+    display: grid;
+    grid-template-columns: 55% 45%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .container .about-me .my-image-section img {
+    width: 60%;
+    height: auto;
+    margin: 5vh auto;
+  }
+  .container .about-me {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .wrapper .first .title {
+    display: flex;
+    justify-content: center;
+  }
+  .wrapper .first .title .dash {
+    display: none;
+  }
+  .wrapper .first .quality {
+    margin-top: 0rem;
+  }
+  .box .box-inner {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .text h1 {
+    font-size: 50px;
+  }
+  .text p {
+    font-size: 14px;
+  }
+  .text .info {
+    font-size: 14px;
+  }
+  .text {
+    padding-left: 4rem;
+  }
+  nav .nav-links {
+    width: 50%;
+  }
+  .container .about-me .my-image-section img {
+    width: 75%;
+    height: auto;
+    margin: 5vh auto;
+  }
+  .wrapper .second .second-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .box .box-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .box .box-inner .one img {
+    width: 30%;
+  }
+  .box .box-inner .two {
+    border: none;
+  }
+}
+@media screen and (max-width: 610px) {
+  .box {
+    border: none;
+    width: 100%;
+    top: 0;
+  }
+  .box .box-inner .two .form {
+    width: 100%;
+  }
+  .box .box-inner .two .form form input {
+    width: 100%;
+  }
+  .box .box-inner .two .form form textarea {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 568px) {
+  nav .nav-links {
+    width: 100%;
+  }
+  .text {
+    padding-left: 2rem;
+  }
+  .text h1 {
+    font-size: 40px;
+  }
+  .container {
+    width: 100%;
+    box-shadow: none;
+  }
+  .container .about-me .my-image-section img {
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper {
+    width: 100%;
+    box-shadow: none;
+  }
+  .wrapper .second .second-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+/*Keyframes-------------------------------------------------------------------*/
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
